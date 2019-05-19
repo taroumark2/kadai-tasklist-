@@ -3,7 +3,8 @@
     <aside class="col-sm-4">
       <%= form_with(model: @task, local: true) do |f| %>
         <div class="form-group">
-          <%= f.text_area :content, class: 'form-control', rows: 5 %>
+          <%= f.text_area :status, :placeholder => "ステータス", class: 'form-control', rows: 1 %>
+          <%= f.text_area :content, :placeholder => "内容", class: 'form-control', rows: 5 %>
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
       <% end %>
